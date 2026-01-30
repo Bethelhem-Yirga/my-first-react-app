@@ -1,29 +1,31 @@
-function Service() {
-  return (
-    <div>
-        <h2>Our Services</h2>
-        <ul>
-            <li>Full Makeup</li>
-    <img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQL3e3SpD23v8fImW1WPLaLluuXNmJwrawQ1mlMUWoxaad0TcaC4Cg0VHxzV8&s"
-      alt="Katherine Johnson"
-    />
-    
-    <img
-       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQL3e3SpD23v8fImW1WPLaLluuXNmJwrawQ1mlMUWoxaad0TcaC4Cg0VHxzV8&s"
-      alt="Katherine Johnson"
-    />
-      
-    <img
-       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQL3e3SpD23v8fImW1WPLaLluuXNmJwrawQ1mlMUWoxaad0TcaC4Cg0VHxzV8&s"
-      alt="Katherine Johnson"
-    />
+import React from 'react';
 
-            <li>Nail</li>
-            <li>Hina</li>
-        </ul>
-    </div>
-  );
-}
+const Service = ({ title, services }) => {
+    return (
+        <div>
+            <h2>{title}</h2>
+            <ul>
+                {services.map((service, index) => (
+                    <li key={index}>
+                        {service.name}
+                        <p>{service.description}</p>
+                        {service.images && service.images.length > 0 && (
+                            <div>
+                                {service.images.map((image, imgIndex) => (
+                                    <img
+                                        key={imgIndex}
+                                        src={image}
+                                        alt={service.name}
+                                        style={{ width: '100px', margin: '0.5em' }} // Adjust styles as needed
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
 
 export default Service;

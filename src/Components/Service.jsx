@@ -1,4 +1,5 @@
 import React from 'react';
+import './Service.module.css'; // Ensure you import your CSS file
 
 const Service = ({ title, services }) => {
     return (
@@ -7,8 +8,8 @@ const Service = ({ title, services }) => {
             <ul>
                 {services.map((service, index) => (
                     <li key={index}>
-                        {service.name}
-                        <p>{service.description}</p>
+                        <h3>{service.name}</h3>
+                        <p className="">{service.description}</p>
                         {service.images && service.images.length > 0 && (
                             <div>
                                 {service.images.map((image, imgIndex) => (

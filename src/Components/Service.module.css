@@ -1,0 +1,8 @@
+/* Service.module.css */
+
+.service-description{
+    font-style: italic; /* Make the text italic */
+    color: #e06c6c;       /* Change text color */
+    font-size: 0.9em;  /* Decrease font size */
+    margin: 0.5em 0;   /* Add some margin around the description */
+}

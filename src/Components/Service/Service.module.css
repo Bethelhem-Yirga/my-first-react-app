@@ -1,0 +1,62 @@
+/* Service.module.css */
+
+/* Container for the entire component */
+.serviceList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Each service item */
+.serviceItem {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+.serviceItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Service title */
+.serviceTitle {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Service description - YOUR STYLES */
+.serviceDescription {
+    font-style: italic;
+    color: #db1e1e;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+    line-height: 1.5;
+}
+
+/* Image container */
+.imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Individual images */
+.serviceImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.serviceImage:hover {
+    transform: scale(1.1);
+}

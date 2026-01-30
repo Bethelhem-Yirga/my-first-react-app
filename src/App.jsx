@@ -1,7 +1,6 @@
 // App.jsx
 import { useState } from 'react';
-import Greeting from './Components/Greeting';
-import Service from './Components/Service';
+import Service from './Components/Service/Service';
 import './App.css';
 
 const App = () => {
@@ -10,36 +9,35 @@ const App = () => {
             name: 'Full Makeup',
             description: 'Complete makeup application including foundation, eyes, and lips.',
             images: [
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQL3e3SpD23v8fImW1WPLaLluuXNmJwrawQ1mlMUWoxaad0TcaC4Cg0VHxzV8&s',
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQL3e3SpD23v8fImW1WPLaLluuXNmJwrawQ1mlMUWoxaad0TcaC4Cg0VHxzV8&s',
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQL3e3SpD23v8fImW1WPLaLluuXNmJwrawQ1mlMUWoxaad0TcaC4Cg0VHxzV8&s'
+                'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400',
+                'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w-400',
+                'https://images.unsplash.com/photo-1530026405186-1d5d54f63c3b?w=400'
             ]
         },
         {
-            name: 'Nail',
+            name: 'Nail Art',
             description: 'Creative and artistic nail designs customized for your style.',
             images: [
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVu6OwU1_dMX-vCP6LbFpaWXJyM1K91MKRZpfK6NOuAqjEJTsv4H73AwBPCRM&s',
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVu6OwU1_dMX-vCP6LbFpaWXJyM1K91MKRZpfK6NOuAqjEJTsv4H73AwBPCRM&s',
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVu6OwU1_dMX-vCP6LbFpaWXJyM1K91MKRZpfK6NOuAqjEJTsv4H73AwBPCRM&s'
-            ] // Add images if any
+                'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400',
+                'https://images.unsplash.com/photo-1607779097041-aafb6d768240?w=400',
+                'https://images.unsplash.com/photo-1607779097102-bca3bdc3bf3e?w=400'
+            ]
         },
         {
-            name: 'Henna',
+            name: 'Henna Design',
             description: 'Traditional henna designs for special occasions.',
             images: [
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlY5YTiBNztTb9O4I3bPC1C9PtOjfdYrMoV-UmhTTIPv_EqbJt7oBBGtTfPQ&s',
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlY5YTiBNztTb9O4I3bPC1C9PtOjfdYrMoV-UmhTTIPv_EqbJt7oBBGtTfPQ&s',
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlY5YTiBNztTb9O4I3bPC1C9PtOjfdYrMoV-UmhTTIPv_EqbJt7oBBGtTfPQ&s'
-            ] // Add images if any
+                'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400',
+                'https://images.unsplash.com/photo-1609924247608-7c0f1c7c5b2a?w=400',
+                'https://images.unsplash.com/photo-1608549999892-c55ea2a587fc?w=400'
+            ]
         },
-
-      
     ];
 
     return (
-        <div>
-            <Service title="Our Services" services={serviceData} />
+        <div className="app-container">
+            <h1>Beauty Services</h1>
+            <Service title="Our Premium Services" services={serviceData} />
         </div>
     );
 };
